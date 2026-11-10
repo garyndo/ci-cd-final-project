@@ -1,0 +1,372 @@
+2026-11-10T04:48:04.0768092Z Current runner version: '2.338.2'
+2026-11-10T04:48:04.0792302Z ##[group]Runner Image Provisioner
+2026-11-10T04:48:04.0793032Z Hosted Compute Agent
+2026-11-10T04:48:04.0793625Z Version: 20261028.624
+2026-11-10T04:48:04.0794198Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-10T04:48:04.0794857Z Build Date: 2026-10-28T21:51:42Z
+2026-11-10T04:48:04.0795635Z Worker ID: {6e87b491-3d42-4497-a7ce-ae242c6ebf65}
+2026-11-10T04:48:04.0796272Z Region: westus2
+2026-11-10T04:48:04.0796799Z Cloud: Azure
+2026-11-10T04:48:04.0797485Z ##[endgroup]
+2026-11-10T04:48:04.0798682Z ##[group]Operating System
+2026-11-10T04:48:04.0799298Z Ubuntu
+2026-11-10T04:48:04.0799750Z 24.04.5
+2026-11-10T04:48:04.0800218Z LTS
+2026-11-10T04:48:04.0800721Z ##[endgroup]
+2026-11-10T04:48:04.0801206Z ##[group]Runner Image
+2026-11-10T04:48:04.0801792Z Image: ubuntu-24.04
+2026-11-10T04:48:04.0802290Z Version: 20261101.360.1
+2026-11-10T04:48:04.0803436Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-10T04:48:04.0804808Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-10T04:48:04.0805718Z ##[endgroup]
+2026-11-10T04:48:04.0807284Z ##[group]GITHUB_TOKEN Permissions
+2026-11-10T04:48:04.0809161Z Contents: read
+2026-11-10T04:48:04.0809690Z Metadata: read
+2026-11-10T04:48:04.0810245Z Packages: read
+2026-11-10T04:48:04.0810734Z ##[endgroup]
+2026-11-10T04:48:04.0812613Z Secret source: Actions
+2026-11-10T04:48:04.0813426Z Cache mode: write
+2026-11-10T04:48:04.0814007Z Prepare workflow directory
+2026-11-10T04:48:04.1075320Z Prepare all required actions
+2026-11-10T04:48:04.1113883Z Getting action download info
+2026-11-10T04:48:04.4548061Z Download action repository 'actions/checkout@v3' (SHA:a37ce9120846195fa4ece8f58b268e6043cb2f26)
+2026-11-10T04:48:04.5408113Z Download action repository 'actions/setup-node@v3' (SHA:3235b876344d2a9aa001b8d1453c930bba69e610)
+2026-11-10T04:48:04.8450458Z Complete job name: build
+2026-11-10T04:48:04.9126197Z ##[group]Run actions/checkout@v3
+2026-11-10T04:48:04.9127024Z with:
+2026-11-10T04:48:04.9127466Z   repository: garyndo/ci-cd-final-project
+2026-11-10T04:48:04.9130573Z   token: ***
+2026-11-10T04:48:04.9130942Z   ssh-strict: true
+2026-11-10T04:48:04.9131325Z   persist-credentials: true
+2026-11-10T04:48:04.9131723Z   clean: true
+2026-11-10T04:48:04.9132088Z   sparse-checkout-cone-mode: true
+2026-11-10T04:48:04.9132517Z   fetch-depth: 1
+2026-11-10T04:48:04.9132873Z   fetch-tags: false
+2026-11-10T04:48:04.9133226Z   lfs: false
+2026-11-10T04:48:04.9133567Z   submodules: false
+2026-11-10T04:48:04.9133935Z   set-safe-directory: true
+2026-11-10T04:48:04.9134340Z   allow-unsafe-pr-checkout: false
+2026-11-10T04:48:04.9134946Z ##[endgroup]
+2026-11-10T04:48:05.1409811Z (node:2000) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-10T04:48:05.1411765Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-10T04:48:05.1520013Z Syncing repository: garyndo/ci-cd-final-project
+2026-11-10T04:48:05.1522639Z ##[group]Getting Git version info
+2026-11-10T04:48:05.1523874Z Working directory is '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
+2026-11-10T04:48:05.1525657Z [command]/usr/bin/git version
+2026-11-10T04:48:05.1602252Z git version 2.56.0
+2026-11-10T04:48:05.1642562Z ##[endgroup]
+2026-11-10T04:48:05.1663443Z Temporarily overriding HOME='/home/runner/work/_temp/f2901e0b-ac40-4fea-80ed-c3561744e9a2' before making global git config changes
+2026-11-10T04:48:05.1678164Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-10T04:48:05.1691824Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+2026-11-10T04:48:05.1716421Z Deleting the contents of '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
+2026-11-10T04:48:05.1721236Z ##[group]Initializing the repository
+2026-11-10T04:48:05.1726632Z [command]/usr/bin/git init /home/runner/work/ci-cd-final-project/ci-cd-final-project
+2026-11-10T04:48:05.1894303Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-10T04:48:05.1896238Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-10T04:48:05.1898049Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-10T04:48:05.1899304Z hint: call:
+2026-11-10T04:48:05.1908397Z hint:
+2026-11-10T04:48:05.1909740Z hint: 	git config --global init.defaultBranch <name>
+2026-11-10T04:48:05.1912846Z hint:
+2026-11-10T04:48:05.1913792Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-10T04:48:05.1915195Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-10T04:48:05.1916326Z hint:
+2026-11-10T04:48:05.1918314Z hint: 	git branch -m <name>
+2026-11-10T04:48:05.1919158Z hint:
+2026-11-10T04:48:05.1920121Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-10T04:48:05.1921828Z Initialized empty Git repository in /home/runner/work/ci-cd-final-project/ci-cd-final-project/.git/
+2026-11-10T04:48:05.1927118Z [command]/usr/bin/git remote add origin https://github.com/garyndo/ci-cd-final-project
+2026-11-10T04:48:05.1976231Z ##[endgroup]
+2026-11-10T04:48:05.1977927Z ##[group]Disabling automatic garbage collection
+2026-11-10T04:48:05.1979066Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-10T04:48:05.2004730Z ##[endgroup]
+2026-11-10T04:48:05.2005810Z ##[group]Setting up auth
+2026-11-10T04:48:05.2010087Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-10T04:48:05.2043589Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-10T04:48:05.2359870Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-10T04:48:05.2391022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-10T04:48:05.2621890Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-10T04:48:05.2665409Z ##[endgroup]
+2026-11-10T04:48:05.2666561Z ##[group]Fetching the repository
+2026-11-10T04:48:05.2676518Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +fe625443df13a8b7269d2a233fc908b55dcef095:refs/remotes/origin/main
+2026-11-10T04:48:05.6313970Z remote: Enumerating objects: 30, done.        
+2026-11-10T04:48:05.6314823Z remote: Counting objects:   3% (1/30)        
+2026-11-10T04:48:05.6315380Z remote: Counting objects:   6% (2/30)        
+2026-11-10T04:48:05.6315906Z remote: Counting objects:  10% (3/30)        
+2026-11-10T04:48:05.6316490Z remote: Counting objects:  13% (4/30)        
+2026-11-10T04:48:05.6317899Z remote: Counting objects:  16% (5/30)        
+2026-11-10T04:48:05.6319530Z remote: Counting objects:  20% (6/30)        
+2026-11-10T04:48:05.6320393Z remote: Counting objects:  23% (7/30)        
+2026-11-10T04:48:05.6321341Z remote: Counting objects:  26% (8/30)        
+2026-11-10T04:48:05.6321867Z remote: Counting objects:  30% (9/30)        
+2026-11-10T04:48:05.6322384Z remote: Counting objects:  33% (10/30)        
+2026-11-10T04:48:05.6322913Z remote: Counting objects:  36% (11/30)        
+2026-11-10T04:48:05.6323432Z remote: Counting objects:  40% (12/30)        
+2026-11-10T04:48:05.6323954Z remote: Counting objects:  43% (13/30)        
+2026-11-10T04:48:05.6324469Z remote: Counting objects:  46% (14/30)        
+2026-11-10T04:48:05.6325148Z remote: Counting objects:  50% (15/30)        
+2026-11-10T04:48:05.6326052Z remote: Counting objects:  53% (16/30)        
+2026-11-10T04:48:05.6326735Z remote: Counting objects:  56% (17/30)        
+2026-11-10T04:48:05.6327774Z remote: Counting objects:  60% (18/30)        
+2026-11-10T04:48:05.6328297Z remote: Counting objects:  63% (19/30)        
+2026-11-10T04:48:05.6328875Z remote: Counting objects:  66% (20/30)        
+2026-11-10T04:48:05.6329657Z remote: Counting objects:  70% (21/30)        
+2026-11-10T04:48:05.6330176Z remote: Counting objects:  73% (22/30)        
+2026-11-10T04:48:05.6330698Z remote: Counting objects:  76% (23/30)        
+2026-11-10T04:48:05.6331211Z remote: Counting objects:  80% (24/30)        
+2026-11-10T04:48:05.6331723Z remote: Counting objects:  83% (25/30)        
+2026-11-10T04:48:05.6332235Z remote: Counting objects:  86% (26/30)        
+2026-11-10T04:48:05.6332749Z remote: Counting objects:  90% (27/30)        
+2026-11-10T04:48:05.6333277Z remote: Counting objects:  93% (28/30)        
+2026-11-10T04:48:05.6333790Z remote: Counting objects:  96% (29/30)        
+2026-11-10T04:48:05.6334302Z remote: Counting objects: 100% (30/30)        
+2026-11-10T04:48:05.6334846Z remote: Counting objects: 100% (30/30), done.        
+2026-11-10T04:48:05.6335417Z remote: Compressing objects:   4% (1/22)        
+2026-11-10T04:48:05.6335998Z remote: Compressing objects:   9% (2/22)        
+2026-11-10T04:48:05.6336532Z remote: Compressing objects:  13% (3/22)        
+2026-11-10T04:48:05.6337321Z remote: Compressing objects:  18% (4/22)        
+2026-11-10T04:48:05.6337866Z remote: Compressing objects:  22% (5/22)        
+2026-11-10T04:48:05.6338407Z remote: Compressing objects:  27% (6/22)        
+2026-11-10T04:48:05.6338942Z remote: Compressing objects:  31% (7/22)        
+2026-11-10T04:48:05.6339477Z remote: Compressing objects:  36% (8/22)        
+2026-11-10T04:48:05.6340033Z remote: Compressing objects:  40% (9/22)        
+2026-11-10T04:48:05.6340582Z remote: Compressing objects:  45% (10/22)        
+2026-11-10T04:48:05.6341123Z remote: Compressing objects:  50% (11/22)        
+2026-11-10T04:48:05.6341655Z remote: Compressing objects:  54% (12/22)        
+2026-11-10T04:48:05.6342359Z remote: Compressing objects:  59% (13/22)        
+2026-11-10T04:48:05.6342906Z remote: Compressing objects:  63% (14/22)        
+2026-11-10T04:48:05.6343437Z remote: Compressing objects:  68% (15/22)        
+2026-11-10T04:48:05.6343981Z remote: Compressing objects:  72% (16/22)        
+2026-11-10T04:48:05.6344700Z remote: Compressing objects:  77% (17/22)        
+2026-11-10T04:48:05.6345394Z remote: Compressing objects:  81% (18/22)        
+2026-11-10T04:48:05.6346233Z remote: Compressing objects:  86% (19/22)        
+2026-11-10T04:48:05.6346858Z remote: Compressing objects:  90% (20/22)        
+2026-11-10T04:48:05.6347588Z remote: Compressing objects:  95% (21/22)        
+2026-11-10T04:48:05.6348125Z remote: Compressing objects: 100% (22/22)        
+2026-11-10T04:48:05.6348693Z remote: Compressing objects: 100% (22/22), done.        
+2026-11-10T04:48:05.6738781Z remote: Total 30 (delta 1), reused 18 (delta 1), pack-reused 0 (from 0)        
+2026-11-10T04:48:05.7767900Z From https://github.com/garyndo/ci-cd-final-project
+2026-11-10T04:48:05.7769461Z  * [new ref]         fe625443df13a8b7269d2a233fc908b55dcef095 -> origin/main
+2026-11-10T04:48:05.7772539Z ##[endgroup]
+2026-11-10T04:48:05.7773886Z ##[group]Determining the checkout info
+2026-11-10T04:48:05.7775270Z ##[endgroup]
+2026-11-10T04:48:05.7776462Z ##[group]Checking out the ref
+2026-11-10T04:48:05.7777876Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-10T04:48:05.7832974Z Switched to a new branch 'main'
+2026-11-10T04:48:05.8688247Z branch 'main' set up to track 'origin/main'.
+2026-11-10T04:48:05.8693610Z ##[endgroup]
+2026-11-10T04:48:05.8730084Z [command]/usr/bin/git log -1 --format='%H'
+2026-11-10T04:48:05.8750634Z 'fe625443df13a8b7269d2a233fc908b55dcef095'
+2026-11-10T04:48:05.9068167Z ##[group]Run actions/setup-node@v3
+2026-11-10T04:48:05.9069091Z with:
+2026-11-10T04:48:05.9069736Z   node-version: 20
+2026-11-10T04:48:05.9070441Z   always-auth: false
+2026-11-10T04:48:05.9071184Z   check-latest: false
+2026-11-10T04:48:05.9078753Z   token: ***
+2026-11-10T04:48:05.9079605Z ##[endgroup]
+2026-11-10T04:48:06.0386670Z Attempting to download 20...
+2026-11-10T04:48:06.0506399Z (node:2090) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-10T04:48:06.0508929Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-10T04:48:06.6201734Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-11-10T04:48:07.9924589Z Extracting ...
+2026-11-10T04:48:08.0030881Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/1c9a471e-7b97-4203-8fb7-0ebce54e2363 -f /home/runner/work/_temp/8133811a-19cd-4fcb-95d2-63fc59260686
+2026-11-10T04:48:08.8707408Z Adding to the cache ...
+2026-11-10T04:48:10.8076011Z ##[group]Environment details
+2026-11-10T04:48:11.0385536Z node: v20.20.2
+2026-11-10T04:48:11.0386004Z npm: 10.8.2
+2026-11-10T04:48:11.0386252Z yarn: 1.22.22
+2026-11-10T04:48:11.0387144Z ##[endgroup]
+2026-11-10T04:48:11.0597488Z ##[group]Run npm ci
+2026-11-10T04:48:11.0597845Z [36;1mnpm ci[0m
+2026-11-10T04:48:11.0619906Z shell: /usr/bin/bash -e {0}
+2026-11-10T04:48:11.0620158Z ##[endgroup]
+2026-11-10T04:48:13.1098687Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-11-10T04:48:13.4705441Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-11-10T04:48:13.6294718Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-11-10T04:48:14.0765738Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-11-10T04:48:14.0908328Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-11-10T04:48:14.3348746Z npm warn deprecated superagent@8.1.2: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+2026-11-10T04:48:15.0112135Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-11-10T04:48:15.7445316Z 
+2026-11-10T04:48:15.7446109Z added 552 packages, and audited 553 packages in 5s
+2026-11-10T04:48:15.7446487Z 
+2026-11-10T04:48:15.7446701Z 144 packages are looking for funding
+2026-11-10T04:48:15.7447236Z   run `npm fund` for details
+2026-11-10T04:48:15.7723399Z 
+2026-11-10T04:48:15.7724273Z 22 vulnerabilities (8 low, 3 moderate, 9 high, 2 critical)
+2026-11-10T04:48:15.7724965Z 
+2026-11-10T04:48:15.7725255Z To address issues that do not require attention, run:
+2026-11-10T04:48:15.7725682Z   npm audit fix
+2026-11-10T04:48:15.7725890Z 
+2026-11-10T04:48:15.7726192Z To address all issues (including breaking changes), run:
+2026-11-10T04:48:15.7726603Z   npm audit fix --force
+2026-11-10T04:48:15.7726768Z 
+2026-11-10T04:48:15.7728198Z Run `npm audit` for details.
+2026-11-10T04:48:15.8017457Z ##[group]Run npm run lint
+2026-11-10T04:48:15.8017750Z [36;1mnpm run lint[0m
+2026-11-10T04:48:15.8042166Z shell: /usr/bin/bash -e {0}
+2026-11-10T04:48:15.8042466Z ##[endgroup]
+2026-11-10T04:48:15.8931440Z 
+2026-11-10T04:48:15.8931991Z > counter-service@1.0.0 lint
+2026-11-10T04:48:15.8932297Z > eslint src/ tests/
+2026-11-10T04:48:15.8932425Z 
+2026-11-10T04:48:16.4989364Z ##[group]Run npm test
+2026-11-10T04:48:16.4989588Z [36;1mnpm test[0m
+2026-11-10T04:48:16.5007816Z shell: /usr/bin/bash -e {0}
+2026-11-10T04:48:16.5008045Z ##[endgroup]
+2026-11-10T04:48:16.5931285Z 
+2026-11-10T04:48:16.5931960Z > counter-service@1.0.0 test
+2026-11-10T04:48:16.5932372Z > jest
+2026-11-10T04:48:16.5932509Z 
+2026-11-10T04:48:17.3597465Z   console.log
+2026-11-10T04:48:17.3598421Z     [2026-11-10T04:48:17.348Z] [INFO] Logging handler established
+2026-11-10T04:48:17.3598641Z 
+2026-11-10T04:48:17.3598803Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.3599000Z 
+2026-11-10T04:48:17.3825629Z   console.log
+2026-11-10T04:48:17.3832384Z     [2026-11-10T04:48:17.374Z] [INFO] Request for Base URL
+2026-11-10T04:48:17.3832597Z 
+2026-11-10T04:48:17.3832772Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.3832976Z 
+2026-11-10T04:48:17.3840548Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET / HTTP/1.1" 200 104 "-" "-"
+2026-11-10T04:48:17.3937793Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /health HTTP/1.1" 200 15 "-" "-"
+2026-11-10T04:48:17.3990784Z   console.log
+2026-11-10T04:48:17.3991150Z     [2026-11-10T04:48:17.396Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.3991381Z 
+2026-11-10T04:48:17.3991534Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.3991767Z 
+2026-11-10T04:48:17.3996641Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4046643Z   console.log
+2026-11-10T04:48:17.4047452Z     [2026-11-10T04:48:17.401Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4047914Z 
+2026-11-10T04:48:17.4048346Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4048645Z 
+2026-11-10T04:48:17.4051414Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4091560Z   console.log
+2026-11-10T04:48:17.4092070Z     [2026-11-10T04:48:17.406Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4092412Z 
+2026-11-10T04:48:17.4092655Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4092966Z 
+2026-11-10T04:48:17.4097728Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 409 72 "-" "-"
+2026-11-10T04:48:17.4140666Z   console.log
+2026-11-10T04:48:17.4141098Z     [2026-11-10T04:48:17.411Z] [INFO] Request to list all counters...
+2026-11-10T04:48:17.4141421Z 
+2026-11-10T04:48:17.4141652Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4141889Z 
+2026-11-10T04:48:17.4145644Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /counters HTTP/1.1" 200 2 "-" "-"
+2026-11-10T04:48:17.4184138Z   console.log
+2026-11-10T04:48:17.4184563Z     [2026-11-10T04:48:17.416Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4184799Z 
+2026-11-10T04:48:17.4184987Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4185189Z 
+2026-11-10T04:48:17.4188473Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4222909Z   console.log
+2026-11-10T04:48:17.4223611Z     [2026-11-10T04:48:17.420Z] [INFO] Request to list all counters...
+2026-11-10T04:48:17.4223897Z 
+2026-11-10T04:48:17.4224054Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4224276Z 
+2026-11-10T04:48:17.4228425Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /counters HTTP/1.1" 200 28 "-" "-"
+2026-11-10T04:48:17.4273002Z   console.log
+2026-11-10T04:48:17.4273474Z     [2026-11-10T04:48:17.424Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4273808Z 
+2026-11-10T04:48:17.4274045Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4274353Z 
+2026-11-10T04:48:17.4279274Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4327849Z   console.log
+2026-11-10T04:48:17.4328343Z     [2026-11-10T04:48:17.429Z] [INFO] Request to Read counter: foo...
+2026-11-10T04:48:17.4328700Z 
+2026-11-10T04:48:17.4328940Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4329256Z 
+2026-11-10T04:48:17.4332629Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /counters/foo HTTP/1.1" 200 26 "-" "-"
+2026-11-10T04:48:17.4373292Z   console.log
+2026-11-10T04:48:17.4373776Z     [2026-11-10T04:48:17.435Z] [INFO] Request to Read counter: nonexistent...
+2026-11-10T04:48:17.4374147Z 
+2026-11-10T04:48:17.4374397Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4374716Z 
+2026-11-10T04:48:17.4377789Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /counters/nonexistent HTTP/1.1" 404 81 "-" "-"
+2026-11-10T04:48:17.4419022Z   console.log
+2026-11-10T04:48:17.4419486Z     [2026-11-10T04:48:17.439Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4419837Z 
+2026-11-10T04:48:17.4420101Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4420411Z 
+2026-11-10T04:48:17.4423292Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4457199Z   console.log
+2026-11-10T04:48:17.4457682Z     [2026-11-10T04:48:17.443Z] [INFO] Request to Update counter: foo...
+2026-11-10T04:48:17.4458054Z 
+2026-11-10T04:48:17.4458289Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4458598Z 
+2026-11-10T04:48:17.4461534Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "PUT /counters/foo HTTP/1.1" 200 26 "-" "-"
+2026-11-10T04:48:17.4528023Z   console.log
+2026-11-10T04:48:17.4528457Z     [2026-11-10T04:48:17.450Z] [INFO] Request to Update counter: nonexistent...
+2026-11-10T04:48:17.4528704Z 
+2026-11-10T04:48:17.4528860Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4529045Z 
+2026-11-10T04:48:17.4531870Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "PUT /counters/nonexistent HTTP/1.1" 404 81 "-" "-"
+2026-11-10T04:48:17.4570441Z   console.log
+2026-11-10T04:48:17.4571005Z     [2026-11-10T04:48:17.454Z] [INFO] Request to Create counter: foo...
+2026-11-10T04:48:17.4571452Z 
+2026-11-10T04:48:17.4572007Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4572337Z 
+2026-11-10T04:48:17.4574070Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+2026-11-10T04:48:17.4607089Z   console.log
+2026-11-10T04:48:17.4607571Z     [2026-11-10T04:48:17.458Z] [INFO] Request to Delete counter: foo...
+2026-11-10T04:48:17.4607916Z 
+2026-11-10T04:48:17.4608158Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4608472Z 
+2026-11-10T04:48:17.4609901Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "DELETE /counters/foo HTTP/1.1" 204 - "-" "-"
+2026-11-10T04:48:17.4652289Z   console.log
+2026-11-10T04:48:17.4652646Z     [2026-11-10T04:48:17.462Z] [INFO] Request to Delete counter: foo...
+2026-11-10T04:48:17.4652878Z 
+2026-11-10T04:48:17.4653049Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4653242Z 
+2026-11-10T04:48:17.4655061Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "DELETE /counters/foo HTTP/1.1" 204 - "-" "-"
+2026-11-10T04:48:17.4692883Z   console.log
+2026-11-10T04:48:17.4693251Z     [2026-11-10T04:48:17.467Z] [INFO] Request to Read counter: foo...
+2026-11-10T04:48:17.4693479Z 
+2026-11-10T04:48:17.4693628Z       at Object.log [as info] (src/middleware/logger.js:6:15)
+2026-11-10T04:48:17.4693818Z 
+2026-11-10T04:48:17.4697455Z ::ffff:127.0.0.1 - - [10/Nov/2026:04:48:17 +0000] "GET /counters/foo HTTP/1.1" 404 73 "-" "-"
+2026-11-10T04:48:17.4722756Z PASS tests/counters.test.js
+2026-11-10T04:48:17.4724440Z   Counter API Service
+2026-11-10T04:48:17.4724708Z     GET /
+2026-11-10T04:48:17.4726432Z       ✓ should return service information (29 ms)
+2026-11-10T04:48:17.4726813Z     GET /health
+2026-11-10T04:48:17.4727730Z       ✓ should return health status (3 ms)
+2026-11-10T04:48:17.4728079Z     POST /counters/:name
+2026-11-10T04:48:17.4728463Z       ✓ should create a new counter (6 ms)
+2026-11-10T04:48:17.4728938Z       ✓ should not create a duplicate counter (10 ms)
+2026-11-10T04:48:17.4729307Z     GET /counters
+2026-11-10T04:48:17.4729641Z       ✓ should list all counters (13 ms)
+2026-11-10T04:48:17.4729863Z     GET /counters/:name
+2026-11-10T04:48:17.4730264Z       ✓ should read a specific counter (10 ms)
+2026-11-10T04:48:17.4730626Z       ✓ should return 404 for non-existent counter (5 ms)
+2026-11-10T04:48:17.4730875Z     PUT /counters/:name
+2026-11-10T04:48:17.4731145Z       ✓ should update (increment) a counter (8 ms)
+2026-11-10T04:48:17.4731453Z       ✓ should not update a missing counter (7 ms)
+2026-11-10T04:48:17.4731681Z     DELETE /counters/:name
+2026-11-10T04:48:17.4731929Z       ✓ should delete a counter (17 ms)
+2026-11-10T04:48:17.4732081Z 
+2026-11-10T04:48:17.4743965Z Test Suites: 1 passed, 1 total
+2026-11-10T04:48:17.4744371Z Tests:       10 passed, 10 total
+2026-11-10T04:48:17.4744700Z Snapshots:   0 total
+2026-11-10T04:48:17.4744903Z Time:        0.578 s
+2026-11-10T04:48:17.4745086Z Ran all test suites.
+2026-11-10T04:48:17.5978028Z Post job cleanup.
+2026-11-10T04:48:17.6990757Z (node:2215) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-10T04:48:17.6991445Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-10T04:48:17.7189588Z Post job cleanup.
+2026-11-10T04:48:17.7797457Z (node:2223) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-10T04:48:17.7798130Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-10T04:48:17.7822332Z [command]/usr/bin/git version
+2026-11-10T04:48:17.7858654Z git version 2.56.0
+2026-11-10T04:48:17.7889385Z Temporarily overriding HOME='/home/runner/work/_temp/ab3e29d2-87bd-4551-8967-fcd821c6ec62' before making global git config changes
+2026-11-10T04:48:17.7890491Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-10T04:48:17.7900374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+2026-11-10T04:48:17.7926621Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-10T04:48:17.7954427Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-10T04:48:17.8160850Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-10T04:48:17.8187605Z http.https://github.com/.extraheader
+2026-11-10T04:48:17.8195354Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-10T04:48:17.8226628Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-10T04:48:17.8560261Z Cleaning up orphan processes
+2026-11-10T04:48:17.8883443Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v3, actions/setup-node@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
