@@ -1,3 +1,4 @@
+cat > .tekton/pipeline.yml <<'EOF'
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
@@ -81,7 +82,5 @@ spec:
       params:
         - name: SCRIPT
           value: |
-            oc create deployment $(params.app-name) --image=$(params.build-image) --dry-run=client -o yaml | oc apply -f EOF
-3. Apply ke cluster
-bash
-oc apply -f .tekton/pvc.yml
+            oc create deployment $(params.app-name) --image=$(params.build-image) --dry-run=client -o yaml | oc apply -f -
+EOF
